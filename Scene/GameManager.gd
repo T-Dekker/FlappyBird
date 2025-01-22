@@ -14,6 +14,8 @@ var game_state
 
 
 var points = 0
+var reward = 0
+var ending := false
 
 func _ready():
 	game_state = GameState.IDLE	
@@ -21,12 +23,16 @@ func _ready():
 	pipe_spawner.bird_crashed.connect(end_game)
 	ground.bird_crashed.connect(end_game)
 	pipe_spawner.point_scored.connect(point_scored)
+	ending = false
 
 func on_game_started():
 	game_state = GameState.RUNNING
 	pipe_spawner.start_spawning_pipes()
 	
 func end_game():
+	if not ending:
+		get_tree().call_deferred("reload_current_scene")
+		ending = true
 	if fade != null: 
 		fade.play()
 	bird.kill()

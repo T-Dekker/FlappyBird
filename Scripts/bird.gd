@@ -19,6 +19,10 @@ func _ready():
 	animation_player.play("idle")
 
 func _physics_process(delta):
+	#var point = $"../RayCast2D_1".get_collision_point()
+	#if $"../RayCast2D_1".is_colliding():
+	#	print(position.distance_to(point))
+	
 	if Input.is_action_just_pressed("jump") && should_process_input:
 		if !is_started: 
 			animation_player.play("flap_wings")

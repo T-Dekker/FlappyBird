@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cet4cekw32tsa" path="res://Assets/base.png" id="1_hc7qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hbgx"]
-size = Vector2(336, 20)
+size = Vector2(336, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5enj"]
-size = Vector2(334, 20)
+size = Vector2(334, 56)
 
 [node name="Ground" type="Node2D"]
 script = ExtResource("1_bm1rx")
@@ -18,7 +18,7 @@ script = ExtResource("1_bm1rx")
 texture = ExtResource("1_hc7qc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground1"]
-position = Vector2(0, -46)
+position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_5hbgx")
 
 [node name="Ground2" type="Area2D" parent="."]
@@ -28,7 +28,7 @@ position = Vector2(336, 0)
 texture = ExtResource("1_hc7qc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
-position = Vector2(335, -46)
+position = Vector2(335, -28)
 shape = SubResource("RectangleShape2D_c5enj")
 
 [connection signal="body_entered" from="Ground1" to="." method="_body_entered"]

@@ -49,6 +49,8 @@ _data = {
 
 [node name="Bird" type="CharacterBody2D"]
 position = Vector2(0, -10)
+collision_layer = 7
+collision_mask = 7
 motion_mode = 1
 script = ExtResource("1_ngkor")
 
