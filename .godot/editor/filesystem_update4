@@ -1,6 +1,12 @@
+res://GodotAdapt/GDScript/Framework.gd
+res://GodotAdapt/GDScript/Agent.gd
+res://Scripts/QLearningAgent.gd
+res://Scripts/bird.gd
+res://Scripts/pipe_spawner.gd
 res://Scene/main.tscn
 res://Scene/bird.tscn
 res://Scene/pipe_pair.tscn
 res://Scene/ground.tscn
 res://Scene/fade.tscn
 res://Scene/UI.tscn
+res://Scene/pipe_pair.gd
